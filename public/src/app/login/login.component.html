@@ -1,0 +1,6 @@
+<form (submit)="registerUser()" #loginForm = "ngForm">
+   <label>Your Name</label>
+   <input type="text" name="name"
+   required [(ngModel)]="newUser.username"><br>
+   <input type="submit" name="" value="Login">
+</form>

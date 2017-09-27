@@ -1,0 +1,24 @@
+<header>
+   <a [routerLink]="['/create']">Create a New Poll</a>
+   <a href="#">Logout</a>
+</header>
+<h2>Current Polls</h2>
+
+<form class="" action="index.html" method="post">
+   <input type="text" name="search" placeholder="Search" #search>
+</form>
+
+<table>
+   <tr>
+      <th>Name</th>
+      <th>Survey Question</th>
+      <th>Date Posted</th>
+      <th>Action</th>
+   </tr>
+   <tr *ngFor="let survey of surveys" >
+      <td>#name</td>
+      <td><a [routerLink]="['/poll', survey._id]">{{ survey.survey_question }}</a></td>
+      <td>{{ survey.created_at | date }}</td>
+      <td><button type="button" (click)=delete(survey._id)>Delete</button></td>
+   </tr>
+</table>

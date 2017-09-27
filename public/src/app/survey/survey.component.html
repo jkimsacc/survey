@@ -1,0 +1,33 @@
+<h3>{{ survey.survey_question}}</h3>
+<h2>Click the Vote button to choose one.</h2>
+
+<table>
+   <tr>
+      <th>Option</th>
+      <th>Current Count of Votes</th>
+      <th>Action</th>
+   </tr>
+   <tr>
+      <td>{{ survey.option1 }}</td>
+      <td>{{ survey.vote1 }}</td>
+      <td><button type="button" name="button">Vote</button></td>
+   </tr>
+   <tr>
+      <td>{{ survey.option2 }}</td>
+      <td>{{ survey.vote2 }}</td>
+      <td><button type="button" name="button">Vote</button></td>
+   </tr>
+   <tr>
+      <td>{{ survey.option3 }}</td>
+      <td>{{ survey.vote3 }}</td>
+      <td><button type="button" name="button">Vote</button></td>
+   </tr>
+   <tr>
+      <td>{{ survey.option4 }}</td>
+      <td>{{ survey.vote4 }}</td>
+      <td><button type="button" name="button">Vote</button></td>
+   </tr>
+
+
+</table>
+{{ survey | json }}

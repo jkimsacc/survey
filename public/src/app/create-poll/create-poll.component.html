@@ -1,0 +1,24 @@
+<header>
+   <a [routerLink]='["/dashboard"]'>Cancel</a>
+</header>
+<h3>Put the question and options here:</h3>
+<form (submit)="createSurvey()" #poleForm="ngForm">
+   <label>Question</label>:
+   <input type="text" name="survey_question" class="question"
+   [(ngModel)]="newSurvey.survey_question"><br>
+   <label>Option 1</label>:
+   <input type="text" name="option1"
+   [(ngModel)]="newSurvey.option1"><br>
+   <label>Option 2</label>:
+   <input type="text" name="option2"
+   [(ngModel)]="newSurvey.option2"><br>
+   <label>Option 3</label>:
+   <input type="text" name="option3"
+   [(ngModel)]="newSurvey.option3"><br>
+   <label>Option 4</label>:
+   <input type="text" name="option4"
+   [(ngModel)]="newSurvey.option4"><br>
+   <input type="submit" name="submit" value="Create Poll">
+
+</form>
+{{ currentUser | json }}
